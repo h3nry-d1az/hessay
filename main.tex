@@ -1,0 +1,51 @@
+\documentclass[
+    title={Lorem Ipsum},
+    author={Henry Díaz Bordón},
+    publisher={Summer of Math Exposition IV}
+]{hessay}
+
+\usepackage{lipsum}
+
+\begin{document}
+    \begin{titlepage}
+        \begin{tikzpicture}[overlay,remember picture]
+            \draw [line width=1.0pt]
+                ($ (current page.north west) + (1cm,-1cm) $)
+                rectangle
+                ($ (current page.south east) + (-1cm,1cm) $);
+            \draw [line width=2pt]
+                ($ (current page.north west) + (1.2cm,-1.2cm) $)
+                rectangle
+                ($ (current page.south east) + (-1.2cm,1.2cm) $);
+        \end{tikzpicture}
+        \begin{center}
+            \vspace*{1cm}
+            \Huge
+            \textbf{\doctitle}
+                
+            \vspace{1.5cm}
+
+            \LARGE
+            \textsc{\docauthor}
+                
+            \vfill
+
+            \includegraphics[width=0.7\textwidth]{example-image-golden}
+
+            \vfill
+                
+            \docpublisher
+                
+            \vspace{0.8cm}
+        \end{center}
+    \end{titlepage}
+
+    \chapter{La razón áurea y la perfección geométrica}
+    \epigraph{El gran libro de la naturaleza está escrito con símbolos matemáticos.}{Galileo Galilei}
+    Durante los tiempos de la antigua Grecia, el estudio de las proporciones cautivó a las mentes más brillantes de por entonces. Renombrados filósofos como Pitágoras o Euclides recurrieron a ellas como medio para comprender nuestro mundo, y los artistas celebérrimos de este periodo las consideraron uno de los instrumentos más útiles a su disposición. Las proporciones fueron, de lejos, el artilugio matemático favorito del mundo clásico.
+
+    \lipsum[1-10]
+
+    \nocite{*}
+    \printbibliography
+\end{document}
